@@ -201,7 +201,6 @@ function EnhancedTableToolbar(props) {
           id="tableTitle"
           component="div"
         >
-          Rules:
           
         </Typography>
       )}

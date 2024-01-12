@@ -12,11 +12,11 @@ const Home = () => {
 			<div className="body">
 				
 				<div className="intro">
-					<h1>Admin & Rules </h1>
+					<h1> Regulation & Score Rules </h1>
 				</div>
 
 				<div className="welcomeMsg">
-					<TypeAnimation
+					{/* <TypeAnimation
 						sequence={[
 							'Welcome to KC 🏸 Saturday Night League!',
 							() => {
@@ -27,22 +27,31 @@ const Home = () => {
 						cursor={true}
 						repeat={0}
 						style={{ display: 'inline-block' }}
-					/>
+					/> */}
 				</div>
 
 			
-				<div className="players" >
-					{/* <div className="avatar1">
-						<Stack direction="Column" spacing={8}>
-							<div id="Sin">
-								<Avatar alt="Linyi" src={LinyiAvatar} sx={{ width: 80, height: 80 }}  /> Angie
-							</div>
-							<div id="Angie">
-								<Avatar alt="Jack" src={JackAvatar} sx={{ width: 80, height: 80 }} /> Sin
-							</div>				
-						</Stack>
-						
-					</div> */}
+				<div className="rules" >
+					
+					<div>
+						(Win+20)(Lose-10)⇦   MD  🆚  MD  ⇨(Win+20)(Lose-10)
+					</div>
+					
+					<div>
+						(Win+25)(Lose-5)⇦  XD  🆚  MD  ⇨(Win+15)(Lose-15)
+					</div>
+
+					<div>
+						(Win+20)(Lose-10)⇦   XD  🆚  XD  ⇨(Win+20)(Lose-10)
+					</div>
+
+					<div>
+						(Win+25)(Lose-5)⇦   WD  🆚  XD   ⇨(Win+15)(Lose-15)
+					</div>
+
+					<div>
+						(Win+20)(Lose-10)⇦   WD  🆚  WD   ⇨(Win+20)(Lose-10)
+					</div>
 
 				</div>
 		

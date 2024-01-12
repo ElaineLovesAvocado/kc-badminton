@@ -22,22 +22,17 @@
     justify-content: center;
 }
 
-.players {
+.rules {
+    padding-top: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 15px;
-    font-family: Monospace;
-    font-size: 18px;
+    padding: 30px;
+    font-family: Arial;
+    font-size: 15px;
+    align-items: center;
 }
 
-
-.avatar1 div:hover{
-    transform: scale(1.1);
-}
-
-.avatar2 div:hover{
-    transform: scale(1.1);
-}
 
 
 #intro-image-container {

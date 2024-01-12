@@ -8,7 +8,7 @@ import { styled } from '@mui/material/styles';
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   width: 350,
-  height: 250,
+  height: 200,
   padding: theme.spacing(2),
   ...theme.typography.body2,
   textAlign: 'center',
@@ -75,7 +75,8 @@ const Match = () => {
     
           <p>Generate random match:</p>
           <div className='firstGame'>
-            <textarea name="postContent" rows={8} cols={45} value={players} onChange={e => setplayers(e.target.value)}> 
+            <textarea name="postContent" placeholder='Input players with number at front. Example: 1.Lin Dan 2. Yaqiong Huang 3. SiweiZ 4. An Se-young'
+            rows={8} cols={45} value={players} onChange={e => setplayers(e.target.value)}> 
             
             </textarea>
           </div>
