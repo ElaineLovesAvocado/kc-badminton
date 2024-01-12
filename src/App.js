@@ -18,7 +18,7 @@ function App() {
 		<Router>
 			<Navbar />
 			<Routes>
-				<Route path="/LevelUp/" element={<Home />} />
+				<Route path="/kcbadminton/" element={<Home />} />
 				<Route path="/home" element={<Home />} />
 				<Route
 					path="/match"
