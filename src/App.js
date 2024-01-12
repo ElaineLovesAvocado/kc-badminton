@@ -18,7 +18,7 @@ function App() {
 		<Router>
 			<Navbar />
 			<Routes>
-				<Route path="/kcbadminton/" element={<Home />} />
+				<Route path="/kc-badminton/" element={<Home />} />
 				<Route path="/home" element={<Home />} />
 				<Route
 					path="/match"

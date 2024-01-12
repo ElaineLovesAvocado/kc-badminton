@@ -2,7 +2,7 @@
   "name": "kcbadminton",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://elainelovesavocado.github.io/kcbadminton/",
+  "homepage": "https://elainelovesavocado.github.io/kc-badminton/",
   "dependencies": {
     "-": "^0.0.1",
     "@emotion/react": "^11.11.3",
