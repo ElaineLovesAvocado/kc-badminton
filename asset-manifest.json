@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kcbadminton/static/css/main.73218d24.css",
-    "main.js": "/kcbadminton/static/js/main.687d5c1d.js",
+    "main.js": "/kcbadminton/static/js/main.15db6188.js",
     "static/js/787.f82d794c.chunk.js": "/kcbadminton/static/js/787.f82d794c.chunk.js",
     "static/media/TJin.gif": "/kcbadminton/static/media/TJin.e42fcdef075e5feeddd6.gif",
     "static/media/JoeS.gif": "/kcbadminton/static/media/JoeS.58f52bffdba9200237d7.gif",
@@ -23,11 +23,11 @@
     "static/media/JoeZ.png": "/kcbadminton/static/media/JoeZ.4c9ed55818bb8442b953.png",
     "index.html": "/kcbadminton/index.html",
     "main.73218d24.css.map": "/kcbadminton/static/css/main.73218d24.css.map",
-    "main.687d5c1d.js.map": "/kcbadminton/static/js/main.687d5c1d.js.map",
+    "main.15db6188.js.map": "/kcbadminton/static/js/main.15db6188.js.map",
     "787.f82d794c.chunk.js.map": "/kcbadminton/static/js/787.f82d794c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73218d24.css",
-    "static/js/main.687d5c1d.js"
+    "static/js/main.15db6188.js"
   ]
 }
