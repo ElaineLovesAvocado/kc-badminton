@@ -1,0 +1,28 @@
+p{
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+}
+.firstGame {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submitButton {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.shuffledMatch {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.teamMatch {
+    font-family: Arial;
+    font-size: 15px;
+}
