@@ -58,10 +58,11 @@ const Match = () => {
       event.preventDefault();
       //var playersArr = playersRef.current.value.replace(/[0-9]/g, "").replace(/\./g,"").replace(/\s+/g, ' ').trim().split(' ')
 
-      var playersArr = players.replace('1.', '').split(/[0-9]+\./)
+      var playersArr = players.replace('1.', '').trim().split(/[0-9]+\./)
 
       var shuffledArr1 = shuffleArray(playersArr)
-      var shuffledArr2 = shuffleArray(playersArr)
+      var shuffledArrSecondTime = shuffleArray(playersArr)
+      var shuffledArr2 = shuffleArray(shuffledArrSecondTime)
 
       setmatch(shuffledArr1)
       setmatch2(shuffledArr2)
