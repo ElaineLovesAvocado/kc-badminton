@@ -47,19 +47,37 @@ function formatMatch(array, formatString) {
 
 }
 
+function formatTeamMatch(array, formatString){
+  if (array.length % 2 != 0) {
+    return "Please check the size of input players!! \n Need to be multiple of 2!"
+  }
+
+  if (array.length < 2){
+    console.log(formatString)
+    return formatString
+  }
+
+  while (array.length > 1) {
+    formatString += '🏸' + array[0] + '  🆚  ' + array[1] + "\n"
+    let newArr = array.slice(2)
+    return formatTeamMatch(newArr, formatString)
+  }
+}
+
 
 const Match = () => {
   const [players, setplayers]  = React.useState("");
+  const [teamMatch, setteamMatch] = React.useState([])
   const [match, setmatch] = React.useState([]);
   const [match2, setmatch2] = React.useState([]);
 
 
   const generateRandomMatch = (event) => {
       event.preventDefault();
-      //var playersArr = playersRef.current.value.replace(/[0-9]/g, "").replace(/\./g,"").replace(/\s+/g, ' ').trim().split(' ')
 
-      var playersArr = players.replace('1.', '').trim().split(/[0-9]+\./)
-
+      //var playersArr = players.replace('1.', '').trim().split(/[0-9]+\./)
+      var playersArr = players.replace(/,/g, '&').replace(/\s/g, '').split('&')
+  
       var shuffledArr1 = shuffleArray(playersArr)
       var shuffledArrSecondTime = shuffleArray(playersArr)
       var shuffledArr2 = shuffleArray(shuffledArrSecondTime)
@@ -67,8 +85,13 @@ const Match = () => {
       setmatch(shuffledArr1)
       setmatch2(shuffledArr2)
 
-      console.log(shuffledArr1) 
-      console.log(shuffledArr2)
+      var teamPlayersArr = players.replace(/\s/g, '').split(/,/g)
+      console.log("*****teamPlayerARR")
+      console.log(teamPlayersArr)
+      var shuffledArr3 = shuffleArray(teamPlayersArr)
+      setteamMatch(shuffledArr3)
+      console.log("shuffled team match *********")
+      console.log(shuffledArr3)
   }
 
   return (
@@ -76,7 +99,7 @@ const Match = () => {
     
           <p>Generate random match:</p>
           <div className='firstGame'>
-            <textarea name="postContent" placeholder='Input players with number at front. Example: 1.Lin Dan 2. Yaqiong Huang 3. SiweiZ 4. An Se-young'
+            <textarea name="postContent" placeholder='Example format: LinDan&LiChong Wei, Huang&SiweiZ, An&Tai, Sin&Angie'
             rows={8} cols={45} value={players} onChange={e => setplayers(e.target.value)}> 
             
             </textarea>
@@ -88,10 +111,16 @@ const Match = () => {
           <div className='shuffledMatch'>
 
               <Stack direction="row" spacing={2}>
+              <DemoPaper variant="elevation">
+                  <h1>Match 1</h1>
+                  <pre className='teamMatch'>{formatTeamMatch(teamMatch, ' ')}</pre>
+                </DemoPaper> 
                 <DemoPaper variant="elevation">
+                  <h1>Match 2</h1>
                   <pre className='teamMatch'>{formatMatch(match, ' ')}</pre>
                 </DemoPaper>              
                 <DemoPaper variant="elevation">
+                  <h1>Match 3</h1>
                   <pre className='teamMatch'>{formatMatch(match2, ' ')}</pre>
                 </DemoPaper>
               </Stack>

@@ -3,6 +3,12 @@ p{
     font-size: 20px;
     text-align: center;
 }
+
+h1{
+    font-family: Arial;
+    font-size: 15px;
+}
+
 .firstGame {
     display: flex;
     justify-content: center;
@@ -20,7 +26,10 @@ p{
     padding-top: 10px;
     display: flex;
     justify-content: center;
+    font-family: Arial;
+    font-size: 20px;
 }
+
 
 .teamMatch {
     font-family: Arial;
