@@ -5,6 +5,10 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   width: 350,
@@ -92,7 +96,32 @@ const Match = () => {
       setteamMatch(shuffledArr3)
       console.log("shuffled team match *********")
       console.log(shuffledArr3)
+
+      // Send email after generated match      
+      var emailResult = "Team match:\n" + formatTeamMatch(teamMatch, ' ') 
+      + '\nMatch1:\n' + formatMatch(match, ' ') + '\nMatch2:\n' + formatMatch(match2, ' '); 
+      console.log("***Email sending*******" + emailResult)
+      var templateParams = {
+        name: "From Sin",
+        message: emailResult
+      };
+
+      sendEmail(templateParams)
   }
+
+  const sendEmail = (templateParams) => {
+    emailjs.send('service_jw2xepg', 'template_kc-badminton', templateParams, {
+        publicKey: 'ecs0JBXL3vFYva7aB',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   return (
     <div className="body">
