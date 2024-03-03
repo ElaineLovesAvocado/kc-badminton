@@ -98,12 +98,12 @@ const Match = () => {
       console.log(shuffledArr3)
 
       // Send email after generated match      
-      var emailResult = "Team match:\n" + formatTeamMatch(teamMatch, ' ') 
+      var emailResult = "Team match:\n" + formatTeamMatch(teamMatch, ' ')
       + '\nMatch1:\n' + formatMatch(match, ' ') + '\nMatch2:\n' + formatMatch(match2, ' '); 
       console.log("***Email sending*******" + emailResult)
       var templateParams = {
         name: "From Sin",
-        message: emailResult
+        message: emailResult.toString()
       };
 
       sendEmail(templateParams)
